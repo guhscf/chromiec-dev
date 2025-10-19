@@ -604,3 +604,28 @@ section {
     padding-top: 6rem;
   }
 }
+
+/* ===== CENTRALIZAÇÃO DESKTOP ===== */
+@media (min-width: 769px) {
+  .projects {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .projects-container {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contact-container {
+    margin: 0 auto;
+    text-align: center;
+  }
+}
