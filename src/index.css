@@ -43,7 +43,8 @@ body {
 
 /* evita que o conteúdo fique sob a navbar */
 section {
-  scroll-margin-top: 72px;
+  scroll-margin-top: 80px;
+  padding-top: 6rem; /* ajusta espaçamento global */
 }
 
 /* LOGO */
@@ -219,7 +220,7 @@ section {
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.15);
 }
 
-/* ===== SCROLL DOWN ARROW (com fade) ===== */
+/* ===== SCROLL DOWN ARROW ===== */
 .scroll-down {
   position: fixed;
   bottom: 15px;
@@ -235,7 +236,7 @@ section {
 
 .scroll-down.hidden {
   opacity: 0;
-  transform: translateX(-50%) translateY(20px); /* leve descida ao sumir */
+  transform: translateX(-50%) translateY(20px);
   pointer-events: none;
 }
 
@@ -272,25 +273,16 @@ section {
   }
 }
 
-/* oculta seta quando sai do Home */
-.about {
-  scroll-margin-top: 72px;
-}
-
-.home:hover ~ .scroll-down {
-  opacity: 1;
-}
-
 /* ===== ABOUT SECTION ===== */
 .about {
-  height: 100vh;
-  width: 100%;
+  min-height: 100vh;
   position: relative;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
   background: radial-gradient(circle at top left, var(--bg-light), #22324a);
+  padding-bottom: 4rem;
 }
 
 #tsparticles-about {
@@ -334,14 +326,21 @@ section {
   color: var(--primary);
   font-weight: 600;
 }
+
+.about-text .final-line {
+  margin-top: 1.2rem;
+  font-style: italic;
+  opacity: 0.9;
+}
+
 .about-image img {
   width: 100%;
   max-width: 320px;
   border-radius: 50%;
   border: 3px solid var(--primary);
   box-shadow: 0 0 25px rgba(0, 119, 204, 0.4);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
   object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .about-image img:hover {
@@ -355,10 +354,8 @@ section {
   width: 100%;
   position: relative;
   overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background: radial-gradient(circle at top left, #101820, #0d1b2a);
+  padding-bottom: 6rem;
 }
 
 #tsparticles-projects {
@@ -403,6 +400,14 @@ section {
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.project-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.8s ease-out;
 }
 
 .project-card:hover {
@@ -434,38 +439,12 @@ section {
   line-height: 1.5;
 }
 
-/* Responsivo */
-@media (max-width: 768px) {
-  .projects-container h2 {
-    font-size: 2rem;
-  }
-
-  .project-info p {
-    font-size: 0.9rem;
-  }
-}
-
-/* ===== ANIMAÇÃO DOS PROJETOS ===== */
-.project-card {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: all 0.8s ease-out;
-}
-
-.project-card.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
 /* ===== CONTACT SECTION ===== */
 .contact {
   min-height: 100vh;
   width: 100%;
   position: relative;
   overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background: radial-gradient(circle at top left, #1a273b, #22324a);
 }
 
@@ -544,21 +523,6 @@ section {
   color: #f5f8fc;
 }
 
-/* Responsivo */
-@media (max-width: 768px) {
-  .contact-container h2 {
-    font-size: 2rem;
-  }
-
-  .contact-container p {
-    font-size: 1rem;
-  }
-
-  .contact-card {
-    max-width: 180px;
-  }
-}
-
 /* ===== FOOTER ===== */
 .footer {
   background: #0d1b2a;
@@ -598,19 +562,12 @@ section {
   color: #00ffaa;
 }
 
-
-
 /* ===== RESPONSIVO ===== */
-@media (max-width: 1024px) {
-  .brand {
-    font-size: 3rem;
-  }
-}
-
 @media (max-width: 900px) {
   .about-content {
     flex-direction: column-reverse;
     text-align: center;
+    gap: 2rem;
   }
 
   .about-text {
@@ -633,5 +590,17 @@ section {
 
   .subtitle {
     font-size: 1.1rem;
+  }
+
+  .about {
+    padding-top: 7rem;
+  }
+
+  .projects {
+    padding-top: 6rem;
+  }
+
+  .contact {
+    padding-top: 6rem;
   }
 }
