@@ -31,7 +31,7 @@ function Contact() {
       id: 4,
       nome: "WhatsApp",
       icone: <Phone size={26} />,
-      link: "https://wa.me/5541987904186", 
+      link: "https://wa.me/5541999637533", 
     },
   ]
 
