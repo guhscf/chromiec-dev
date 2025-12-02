@@ -36,7 +36,7 @@ function Footer() {
             <Github size={22} />
           </a>
           <a
-            href="https://wa.me/5541987904186"
+            href="https://wa.me/5541999637533"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="WhatsApp"
