@@ -1,7 +1,7 @@
 import { useCallback } from "react"
 import Particles from "react-tsparticles"
 import { loadFull } from "tsparticles"
-import { Mail, Linkedin, Github, Phone } from "lucide-react"
+import { Mail, Linkedin, Github, Instagram } from "lucide-react"
 
 function Contact() {
   const particlesInit = useCallback(async (engine) => {
@@ -29,9 +29,9 @@ function Contact() {
     },
     {
       id: 4,
-      nome: "WhatsApp",
-      icone: <Phone size={26} />,
-      link: "https://wa.me/5541999637533", 
+      nome: "Instagram",
+      icone: <Instagram size={26} />,
+      link: "https://www.instagram.com/chromiecdev?igsh=MTdkZ3prN3A5eGRtMQ==", 
     },
   ]
 

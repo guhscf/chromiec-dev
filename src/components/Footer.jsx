@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, Phone } from "lucide-react"
+import { Github, Linkedin, Mail, Instagram } from "lucide-react"
 
 function Footer() {
   return (
@@ -36,12 +36,12 @@ function Footer() {
             <Github size={22} />
           </a>
           <a
-            href="https://wa.me/5541999637533"
+            href="https://www.instagram.com/chromiecdev?igsh=MTdkZ3prN3A5eGRtMQ=="
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="WhatsApp"
+            aria-label="Instagram"
           >
-            <Phone size={22} />
+            <Instagram size={22} />
           </a>
         </div>
       </div>
